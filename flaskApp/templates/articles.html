@@ -2,12 +2,20 @@
 
 {% block body %}
 
-<ul class="list-group">
-{% for article in Articles %}
-
-<li class="list-group-item"><a href="articles/{{ article.id }}">{{ article.name }}</a></li>
-
-{% endfor %}
-</ul>
+<h1>Articles</h1>
+<br>
+<hr>
+<table class="table table-striped">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+    </tr>
+    {% for article in articles %}
+        <tr>
+            <th><a href="/articles/{{ article.id }}">{{ article.title }}</a></th>
+            <th>{{ article.author }}</th>
+        </tr>
+    {% endfor %}
+</table>
 
 {% endblock %}
