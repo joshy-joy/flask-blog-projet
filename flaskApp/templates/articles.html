@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<ul class="list-group">
+{% for article in Articles %}
+
+<li class="list-group-item"><a href="articles/{{ article.id }}">{{ article.name }}</a></li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}
