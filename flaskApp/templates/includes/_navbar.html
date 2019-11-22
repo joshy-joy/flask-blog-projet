@@ -7,6 +7,13 @@
         </nav>
 
         <nav class="my-2 my-md-0 mr-md-3 navbar-right">
+          {% if session.logged_in %}
+            <a class="p-2 text-dark" href="/dashboard">Dashboard</a>
+            <a class="p-2 text-dark btn btn-primary" href="/logout">Logout</a>
+          {% else %}
             <a class="p-2 text-dark btn btn-primary" href="/register">Register</a>
+            <a class="p-2 text-dark btn btn-primary" href="/login">Login</a>
+          {% endif %}
+            
         </nav>
 </div>
