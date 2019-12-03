@@ -24,7 +24,7 @@ $ sudo apt install python3-pip
 
 ```
 $ pip install flask
-
+```
 
 All the above requirements are already installed in the Virtual environment 'venv'. 
 
